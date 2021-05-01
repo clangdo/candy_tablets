@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://block/block.tscn" type="PackedScene" id=1]
+
+[node name="LevelTileLeftDown" type="Node2D"]
+
+[node name="Ceiling" parent="." instance=ExtResource( 1 )]
+width = 64
+
+[node name="WallRight" parent="." instance=ExtResource( 1 )]
+position = Vector2( 4032, 0 )
+height = 64
+
+[node name="FloorRight" parent="." instance=ExtResource( 1 )]
+position = Vector2( 2560, 4032 )
+width = 24
+
+[node name="FloorLeft" parent="." instance=ExtResource( 1 )]
+width = 24

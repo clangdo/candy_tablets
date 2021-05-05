@@ -1,22 +1,22 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://test/level/level.gd" type="Script" id=1]
 [ext_resource path="res://block/block.tscn" type="PackedScene" id=2]
 [ext_resource path="res://monch/monch.tscn" type="PackedScene" id=3]
 
 [node name="Level" type="Node2D"]
-script = ExtResource( 1 )
-wall_scene = ExtResource( 2 )
-platform_scene = ExtResource( 2 )
 
 [node name="Monch" parent="." instance=ExtResource( 3 )]
-position = Vector2( 155.565, 93.6566 )
+position = Vector2( 544, 288 )
 radius = 32.0
 
-[node name="PlatformLocations" type="Node" parent="."]
+[node name="Floor" parent="." instance=ExtResource( 2 )]
+position = Vector2( 512, 576 )
+width = 29
 
-[node name="Location1" type="Node2D" parent="PlatformLocations"]
-position = Vector2( 307.011, 197.886 )
+[node name="WallRight" parent="." instance=ExtResource( 2 )]
+position = Vector2( 992, 320 )
+height = 17
 
-[node name="Location2" type="Node2D" parent="PlatformLocations"]
-position = Vector2( 660.064, 314.476 )
+[node name="WallLeft" parent="." instance=ExtResource( 2 )]
+position = Vector2( 32, 320 )
+height = 17

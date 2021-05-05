@@ -22,7 +22,7 @@ func _physics_process(delta):
 	if Input.is_action_pressed("left"):
 		velocity.x += min(velocity.x - max_speed.x, 0)
 
-	var _col = move_and_collide(velocity * delta)
+	var _col = move_and_slide(velocity)
 
 func _draw():
 	draw_circle(Vector2(0, 0), radius, color)
